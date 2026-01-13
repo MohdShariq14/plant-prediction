@@ -82,11 +82,43 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== FILE UPLOADER ===== */
 div[data-testid="stFileUploader"] {
-    background: rgba(255,255,255,0.04);
+    background: #000000 !important;
     border-radius: 14px;
-    padding: 16px;
-    border: 1px dashed rgba(255,255,255,0.15);
+    padding: 18px;
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.8);
 }
+
+/* Upload text */
+div[data-testid="stFileUploader"] label,
+div[data-testid="stFileUploader"] span {
+    color: #e0f7fa !important;
+    font-weight: 500;
+}
+
+/* Drag & drop area */
+div[data-testid="stFileUploader"] section {
+    background: rgba(255,255,255,0.04) !important;
+    border-radius: 12px;
+    border: 1px dashed rgba(255,255,255,0.25);
+}
+
+/* Browse files button */
+div[data-testid="stFileUploader"] button {
+    background: linear-gradient(135deg, #ffeb3b, #fdd835);
+    color: #1a1a1a;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 0 4px 14px rgba(255,235,59,0.45);
+    transition: all 0.3s ease;
+}
+
+/* Browse hover */
+div[data-testid="stFileUploader"] button:hover {
+    background: linear-gradient(135deg, #69f0ae, #00e676);
+    color: #003d1f;
+}
+
 
 /* ===== PREMIUM BUTTON ===== */
 .stButton > button {
