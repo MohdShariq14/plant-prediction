@@ -14,7 +14,7 @@ st.markdown("""
     <style>
     .stApp {
     background: linear-gradient(135deg, #000000, #0f2027, #1b4332);
-    color: white;
+    color: aqua;
 }
     .result-card {
         background: rgba(255,255,255,0.95);
