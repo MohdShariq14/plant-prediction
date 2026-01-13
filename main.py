@@ -195,12 +195,18 @@ with col1:
 with col2:
     if uploaded_file is not None:
         if st.button("🔍 Detect Disease", use_container_width=True):
-            with st.spinner("Analyzing image and contacting API..."):
-                try:
-                    files = {
-                        "file": (uploaded_file.name, uploaded_file.getvalue(), uploaded_file.type)}
-                    response = requests.post(
-                        f"{api_url}/disease-detection-file", files=files)
+            result_placeholder = st.empty()
+            with result_placeholder.container():
+                with st.spinner("Analyzing image and contacting API..."):
+                    try:
+                        files = {
+                    "file": (uploaded_file.name, uploaded_file.getvalue(), uploaded_file.type)
+                }
+                        response = requests.post(
+                    f"{api_url}/disease-detection-file",
+                    files=files,
+                    timeout=60
+                )
                     if response.status_code == 200:
                         result = response.json()
 
