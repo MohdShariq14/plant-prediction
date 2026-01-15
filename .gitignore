@@ -1,15 +1,26 @@
-# Environment variables
+# ===============================
+# Environment variables (IGNORE)
+# ===============================
 .env
 
-# Python
+# ===============================
+# Python cache & compiled files
+# ===============================
 __pycache__/
 *.py[cod]
 *$py.class
+
+# ===============================
+# C extensions
+# ===============================
 *.so
-.Python
+
+# ===============================
+# Build / distribution
+# ===============================
 build/
-develop-eggs/
 dist/
+develop-eggs/
 downloads/
 eggs/
 .eggs/
@@ -26,7 +37,9 @@ share/python-wheels/
 *.egg
 MANIFEST
 
-# Virtual environments
+# ===============================
+# Virtual Environments
+# ===============================
 venv/
 env/
 ENV/
@@ -34,13 +47,17 @@ env.bak/
 venv.bak/
 .venv/
 
-# IDE
+# ===============================
+# IDE / Editor
+# ===============================
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
-# OS
+# ===============================
+# OS files
+# ===============================
 .DS_Store
 Thumbs.db
